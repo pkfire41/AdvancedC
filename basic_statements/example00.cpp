@@ -4,10 +4,12 @@
 */
 #include <iostream>  // to allow use of std::cout and std::endl
 int main() {
-  auto i = 7;    // what type is variable i?
+  auto i = 7;    // what type is variable i? 
+  // i seems to be an int
   auto j = 9.0;  // what type is variable j?
+  // j seems to be a double
  
-  bool ret = ( ( i <=> j) == 0 );  // change the '== 0' part so that the output is 1   
+  bool ret = ( ( i <=> j) != 0 );  // change the '== 0' part so that the output is 1   
  
   std::cout << ret << std::endl;
   return 0;
