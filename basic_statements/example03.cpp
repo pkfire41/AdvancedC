@@ -5,10 +5,19 @@
   */
 #include <iostream>  // to allow use of std::cout and std::endl
 int main( ) {
-    
-  
+  double number = 0.0;
 
+  std::cout << "give me an arbitrary number" << std::endl;
+  std::cin >> number;
 
+  std::cout << number << "is the choosen number" << std::endl;
+
+  while((number/2) >= 10.0) {
+    number /= 2;
+    std::cout << number << std::endl;
+  }
+
+  std::cout << "the last number which hasn't been smaller than 10 was: " << number << std::endl;
 
   return 0;
 }

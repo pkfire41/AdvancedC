@@ -6,7 +6,11 @@
 #include <iostream>  // to allow use of std::cout and std::endl
 int main( ) {
       
+  for(int i = 120; i > 44; i-=7){
+    std::cout << "the number is: " << i << std::endl;
+  }
 
+  std::cout << "loop is over" << std::endl;
 
 
   return 0;
