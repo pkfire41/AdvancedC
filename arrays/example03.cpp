@@ -11,6 +11,9 @@ int main() {
     myArray[i] = ( rand() % 25 ); // numbers between 0 and 24
     
     // draw here with std::cout and std::endl
+    for(int j = 0; j < myArray[i]; j++){
+      std::cout << "\u2589";
+    }
     
     std::cout << myArray[i] << std::endl;
   }
