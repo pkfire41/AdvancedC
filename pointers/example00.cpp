@@ -13,6 +13,14 @@ int main(int argc, char *argv[]) {
     // add code to create an array of length size, and fill it with increasing
     // numbers from 1 till size, display these, and then delete the array 
 
+    int *arr = new int[size];
+    for(int i = 0; i < size; i++){
+      arr[i] = i+1;
+      std::cout << "the number on spot " << i << " is: " << arr[i] << std::endl; 
+    }
+
+    delete[] arr;
+    arr = NULL;
   }
   return 0;
 }

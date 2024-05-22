@@ -35,6 +35,7 @@ void GPSCoord::print() const {
 class GPSTrace {  // class for a GPS trace
  public:
   GPSTrace(uint16_t numPoints);
+  GPSTrace(GPSTrace *const &source);
   ~GPSTrace();
   // add a new point to trace at position pos:
   void setPoint(GPSCoord newPoint, uint16_t pos);  // set a GPSCoord
@@ -46,6 +47,10 @@ class GPSTrace {  // class for a GPS trace
 
 GPSTrace::GPSTrace(uint16_t numpoints): numPoints(numpoints) {
   points = new GPSCoord[numPoints];
+}
+GPSTrace::GPSTrace(GPSTrace *const &source) {
+  points = source->points;
+  numPoints = source->numPoints;
 }
 GPSTrace::~GPSTrace() {
   delete[] points; points = NULL; numPoints = 0;
@@ -62,11 +67,13 @@ int GPSTrace::print() const {  // output trace to console
 // extend it to illustrate copying a GPSTrace object:
 int main() {
   GPSTrace t(5);
+  GPSTrace t2(&t);
   for (auto i = 0; i < 5; i++ ) {  // fill in the points
     GPSCoord point;
     point.set(i*1.2, i*3.4);
     point.setElevation(i*5.6);
     t.setPoint(point, i);
   }
+  t2.print();
   return t.print();
 }
