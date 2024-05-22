@@ -7,8 +7,18 @@
 
 // write the class here
 
+class Test {
+    public:
+    Test(){
+      std::cout << "hello" << std::endl;
+    }
+    ~Test(){
+      std::cout<<"bye bye" << std::endl;
+    }
+};
+
 int main() {
   // create a class object here
-
+  Test testing;
   return 0;
 }

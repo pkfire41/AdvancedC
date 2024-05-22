@@ -13,10 +13,29 @@ class NumberSequence {  // class for sequence of whole, positive numbers
   uint16_t *seq;  // the numbers are stored as a dynamic array 
 };
 
+NumberSequence::NumberSequence(uint16_t length = 10) : length(length) {
+  for(int i = 0; i < length; i++){
+    *(seq+i) = 0;
+  }
+};
+
+void NumberSequence::forEach(std::function<uint16_t(uint16_t)> func) {
+  for(int i = 0; i < length; i++){
+    *(seq+i) = func(*seq+i);
+  }
+};
+
+void NumberSequence::print() const {
+  for(int i = 0; i < length; i++){
+    std::cout<< "number at position " << i << ": " << *(seq+i) << std::endl;
+  }
+};
+
 // define all NumberSequence methods here
 //
 
 uint16_t times2(uint16_t n) { return n*2; }
+
 
 int main() {
   NumberSequence s;

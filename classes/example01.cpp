@@ -6,9 +6,27 @@
   otherwise 0.
 */
 // write the class here
+
+class MyNumber {
+  private:
+    int number = 0;
+    bool flag = false;
+  public:
+    MyNumber(int x, bool value){
+      this->number = x; 
+      this->flag = value;
+    }
+    ~MyNumber(){}
+    int getMyNumber(){
+      return this->flag ? this->number : 0;
+    }
+};
+
 int main() {
   int returnValue; 
   // create a class object here 
+  MyNumber number = MyNumber(5, false);
+  returnValue = number.getMyNumber();
   // and use its get method
   return returnValue;
 }
