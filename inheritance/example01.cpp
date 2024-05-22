@@ -3,8 +3,13 @@
 class Element {  // class representing graphic element
  public:
   Element(double x, double y) : x(x), y(y) {}
+  void print();
  private:
   double x, y;  // position of graphic element
+};
+
+void Element::print(){
+  std::cout<< "the location is: " << x << "," << y << std::endl;
 };
 
 class Rectangle : public Element {  // class representing a rectangle
