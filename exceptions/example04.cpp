@@ -4,7 +4,7 @@
 void run();  // catch exception + wrap it in nested exception
 void open_file(const std::string& s);  // catch exception + wrap it
 
-// Nested exception adds 'level' spaces + prints messages via recursion & polymorphism
+// Nested exception adds 'level' spaces and prints messages through recursion
 void print_exception(const std::exception& e, int level = 0) {
   std::cerr << std::string(level, ' ') << "exception: " << e.what() << "\n";
   try { std::rethrow_if_nested(e); }

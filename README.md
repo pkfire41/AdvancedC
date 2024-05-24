@@ -3,6 +3,8 @@ A collection of lecture slides and code from the Advanced Programming in C++ cla
 
 The lecture slides are update here in real-time:
 https://docs.google.com/presentation/d/135ddC7r_z0iJaDsG9pqBxWZ0PFgxYG8ZoBCeQWuA7EQ
+The lecture slides are update here in real-time:
+https://docs.google.com/presentation/d/135ddC7r_z0iJaDsG9pqBxWZ0PFgxYG8ZoBCeQWuA7EQ
 
 Course overview:
 
@@ -30,8 +32,7 @@ Course overview:
 
 [Slide set 06](/Advanced_CPP06.pdf)
 [Assignments set 06a - exceptions](/exceptions/)
-[Assignments set 06b - streams](/streams/)
-[Assignments set 06c - containers](/containers/)
+[Assignments set 05b - containers](/containers/)
 [Video](https://youtu.be/)
 
 
